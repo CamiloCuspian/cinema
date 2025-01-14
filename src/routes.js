@@ -3,11 +3,11 @@ import Inicio from "pages/Inicio";
 import NotFound from "pages/NotFound";
 import PaginaBase from "pages/PaginaBase";
 import Player from "pages/Player";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";  // Cambia aquí
 
 function AppRoutes() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<PaginaBase />}>
           <Route index element={<Inicio />}></Route>
@@ -16,7 +16,7 @@ function AppRoutes() {
           <Route path="*" element={<NotFound />}></Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
